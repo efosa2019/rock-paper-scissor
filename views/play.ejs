@@ -1,0 +1,77 @@
+<%- include('partials/header') -%>
+<form method="POST">
+<div class="area">
+  <!-- Heading -->
+  <section id="Heading">
+    <div class="rank">
+      <a href="/rank"><i class="fas fa-trophy fa-2x"></i></a>
+    </div>
+    <div class="head-div">
+      <img class="logo" src="./images/logo.svg" alt="logo-img">
+      <div class="score">
+        <h3>SCORE</h3>
+        <h1 name="scoreData">0</h1>
+        <input name="highScore" type="text" style="display: none;">
+      </div>
+    </div>
+    <a href="/logout">Logout</a>
+    <div class="profile">
+      <a href="/profile"><img class="profile-img" src="./images/Lucifer.jpg" alt="profile-img"></a>
+    </div>
+  </section>
+<section id="play">
+    <div class="first">
+      <div class="options">
+        <img class="triangle" src="./images/bg-triangle.svg" alt="triangle-bg">
+        <button type="button" class="blue icon" href="#"><img class="paper" src="./images/icon-paper.svg" alt="icon-img"></button>
+        <button type="button" class="yellow icon"><img class="scissor" src="./images/icon-scissors.svg" alt="icon-img"></button>
+        <button type="button" class="red icon"><img class="rock" src="./images/icon-rock.svg" alt="icon-img"></button>
+      </div>
+    </div>
+
+    <div class="second">
+      <div class="container">
+        <div class="box user">
+          <h1>YOU PICKED</h1>
+          <button class="container-icon"><img src="" ></button>
+        </div>
+        <div class="box comp">
+          <h1>THE HOUSE PICKED</h1>
+          <button class="container-icon empty"><img  src=""></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="final">
+      <div class="result">
+        <div class="play-div">
+          <h1>YOU PICKED</h1>
+          <button class="container-icon player"><img src=""></button>
+        </div>
+        <div class="declare">
+          <h1>YOU WIN</h1>
+          <button type="submit" class="play-again">PLAY AGAIN</button>
+        </div>
+        <div class="play-div">
+          <h1>THE HOUSE PICKED</h1>
+          <button class="container-icon bot"><img src=""></button>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+
+
+  <section id="rule">
+    <div class="rule-box">
+      <button class="rule-button" href="#">RULES</button>
+    </div>
+  </section>
+</div>
+</form>
+<div class="rule-container">
+    <img class="rule-img" src="images/image-rules.svg" alt="rule image">
+    <img class="cross" src="images/icon-close.svg" alt="cross image">
+</div>
+
+<%- include('partials/footer') -%>

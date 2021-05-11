@@ -1,0 +1,598 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+    min-height: 100vh;
+    background: radial-gradient(hsl(214, 47%, 23%) 0%,hsl(237, 49%, 15%) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+
+/* Heading */
+.head-div{
+    width: 100%;
+    padding: 30px;
+    border: solid 2px hsl(217, 16%, 45%);
+    border-radius: 20px;
+    margin: 30px auto;
+}
+
+.head-div .logo{
+    width: 150px;
+}
+
+
+.head-div .score{
+    float: right;
+    width: 120px;
+    height: 100px;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: -15px;
+}
+
+.score h3{
+    color: hsl(229, 64%, 46%);
+}
+
+.score h1{
+    color: hsl(229, 25%, 31%);
+    font-size: 70px;
+    margin-top: 0;
+}
+
+
+
+
+/* Play */
+.first{
+    height: 400px;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    margin-top: 100px;
+}
+
+
+.triangle{
+    position: absolute;
+    z-index: -1;
+    top: 60px;
+    left: 50%;
+    margin-left: -150px;
+}
+
+.icon{
+    border-radius: 50%;
+    padding: 30px;
+    height: 180px;
+    width: 180px;
+    border: 20px solid;
+    position: absolute;
+}
+
+.icon:hover{
+    box-shadow: none;
+    transform: translateY(10px);
+}
+
+.blue{
+    border-color: hsl(230, 89%, 62%);
+    left: 42%;
+    margin-left: -90px;
+    color: hsl(230, 89%, 65%);
+    box-shadow: inset 0px 7px 2px #cecccc,  0 7px 0 1px hsl(230, 89%, 62%);
+}
+
+.yellow{
+    border-color: hsl(39, 89%, 49%);
+    right: 42%;
+    margin-right: -90px;
+    color:hsl(40, 84%, 53%) ;
+    box-shadow: inset 0px 7px 2px #cecccc, 0 7px 0px 1px hsl(39, 89%, 49%);
+}
+
+.red{
+    border-color: hsl(349, 71%, 52%);
+    top: 210px;
+    left: 50%;
+    margin-left: -90px;
+    color:  hsl(349, 70%, 56%);
+    box-shadow: inset 0px 7px 2px #cecccc, 0 7px 0 1px hsl(349, 71%, 52%);
+}
+
+/* second */
+
+.second{
+    height: 400px;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    margin-top: 100px;
+}
+
+.second .container{
+    display:flex;
+    text-align: center;
+}
+
+.box{
+    width: 50%;
+    height: 100%;
+    color: #ffffff;
+    font-family: 'Barlow Semi Condensed', sans-serif ;
+    letter-spacing: 3px;
+}
+
+.box h1{
+    margin: 50px;
+}
+
+.container-icon{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    position: static;
+    margin: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    border: 30px solid;
+}
+
+.container-icon img{
+    width: 60%;
+}
+
+.container-icon.empty{
+    background-color: hsl(237, 49%, 15%);
+    border: none;
+}
+
+
+
+.final{
+    height: 400px;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    margin-top: 100px;
+}
+.result{
+    display: flex;
+    text-align: center;
+    color: #fff;
+    font-family: 'Barlow Semi Condensed', sans-serif ;
+}
+
+
+.play-div{
+    width: 35%;
+    height: 100%;
+    letter-spacing: 3px;
+}
+
+.play-div h1{
+    margin: 50px;
+}
+
+.declare{
+    width: 30%;
+    height: 100%;
+    justify-content: center;
+    padding-top:200px;
+}
+
+.declare h1{
+    font-size: 50px;
+    position: relative;
+    z-index: 1000;
+}
+
+.declare button{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #fff;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+
+.win{
+    position: relative;
+    box-shadow: 0 0 0 40px hsl(229, 25%, 31%), 0 0 0 80px hsl(228, 29%, 26%),0 0 0 120px hsl(228, 36%, 25%),0 0 0 160px hsl(229, 42%, 22%);
+    z-index: -1;
+}
+
+.visible{
+    display: none;
+}
+
+
+/* Rules */
+.rule-button{
+    height: 40px;
+    width: 130px;
+    float: right;
+    border: 2px solid hsl(217, 16%, 45%);
+    margin: 30px;
+    background-color: transparent;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    letter-spacing: 3px;
+}
+
+.rule-button:hover{
+    color:hsl(229, 25%, 31%);
+    background-color: #fff;
+}
+
+
+
+
+.rule-container .rule-img{
+    width: 40%;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+
+.cross{
+    position: absolute;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    top: 20px;
+    right: 20px;
+}
+
+
+.blur{
+    opacity: 10%;
+}
+
+
+/* Extra */
+/* Play Page */
+#Heading{
+    display: flex;
+}
+#Heading i{
+    color: #fff;
+    margin: 100px 30px auto;
+}
+
+#Heading a{
+    text-decoration: none;
+    color: #fff;
+    margin: 100px 30px auto;
+}
+
+
+
+.profile img{
+    height: 40px;
+    width: 40px;
+    margin: 90px 30px auto;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+
+/* Login page */
+.form{
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background: radial-gradient(hsl(214, 47%, 23%) 0%,hsl(237, 49%, 15%) 100%);
+}
+
+.auth-box{
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.auth-box h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+
+.auth-box input[type="text"],.auth-box input[type="password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.auth-box input[type="text"]:focus,.auth-box input[type="password"]:focus{
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+.auth-box input[type="submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.auth-box input[type="submit"]:hover{
+    background: #2ecc71;
+}
+
+.auth-box p{
+    color: hsl(217, 16%, 45%);
+}
+
+.auth-box p a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+
+
+/* Profile */
+.profile-body{
+    min-height: 90vh;
+    margin: 0;
+    padding: 0;
+    padding-top: 5%;
+}
+
+.profile-box{
+    width: 450px;
+    background: rgba(0,0,0,0.4);
+    padding: 40px;
+    text-align: center;
+    margin: auto;
+    color: #fff;
+}
+
+
+.profile-box h1{
+    font-size: 40px;
+    letter-spacing: 4px;
+    font-weight: 100;
+}
+
+.profile-box h5{
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 100;
+}
+
+
+.profile-box a{
+    text-decoration: none;
+    color: #fff;
+    text-align: justify;
+}
+
+.profile-box input[type="submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.profile-box input[type="submit"]:hover{
+    background: #2ecc71;
+}
+
+.profile-box input[type="text"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.profile-box input[type="text"]:focus,.auth-box input[type="password"]:focus{
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+.profile-box img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+
+
+
+/* Rank */
+.rank-box{
+    width: 450px;
+    background: rgba(0,0,0,0.4);
+    padding: 40px;
+    text-align: center;
+    margin: auto;
+    color: #fff;
+}
+
+.rank-box a{
+    text-decoration: none;
+    color: #fff;
+    text-align: justify;
+}
+
+
+.rank-box h3{
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+
+.rank-box .score-head h3{
+    display: inline-block;
+    margin: 0px 50px 10px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li:nth-child(odd){
+    display: inline-block;
+    margin-bottom: 10px;
+    list-style: none;
+    position: relative;
+    right: 100px;
+}
+
+li:nth-child(even){
+    display: inline-block;
+    margin-bottom: 10px;
+    list-style: none;
+    position: relative;
+    left: 60px;
+}
+
+
+
+
+
+
+@media (max-width:1000px){
+
+    body{
+        min-height: 130vh;
+    }
+
+    /* Heading */
+    .head-div{
+        width: 100%;
+    }
+
+    .head-div .logo{
+        width: 120px;
+    }
+    .head-div .score{
+        width: 100px;
+        height: 80px;
+    }
+    .score h3{
+        line-height: 10px;
+    }
+
+    #Heading i{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #Heading a{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .profile{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+
+    /* first */
+    .blue{
+        left: 30%;
+    }
+    .yellow{
+        right: 30%;
+    }
+
+
+    /* second */
+    .box h1{
+        margin: auto auto 50px auto;
+    }
+    .container-icon{
+        width: 200px;
+        height: 200px;
+        border: 20px solid;
+    }
+
+    /* final */
+    .play-div{
+        width: 50%;
+    }
+    .play-div h1{
+        margin: auto auto 50px auto;
+    }
+    
+    .declare{
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        margin-left: -165px;
+        justify-content: center;
+        width: 50%;
+        height: 100px;
+    }
+
+    .win{
+        box-shadow: 0 0 0 20px hsl(229, 25%, 31%), 0 0 0 40px hsl(228, 29%, 26%),0 0 0 60px hsl(228, 36%, 25%),0 0 0 0px hsl(229, 42%, 22%);
+        left: 0;
+        right: 0;
+    }
+
+    /* rule */
+    .rule-button{
+        float: none;
+        position: absolute;
+        left: 50%;
+        margin-left: -65px;
+        margin-top: 100px;
+    }
+}
+
